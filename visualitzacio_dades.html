@@ -6,14 +6,20 @@
 <script>
 $(document).ready(function(){
 
-$.getJSON("https://gerardcd.github.io/data_cases.json", function(dataCases) {
-    alert(dataCases.records[0]);
+d3.json("https://gerardcd.github.io/data_cases.json").then((dataCases) => {
+    $("#viz").html(dataCases.records[0]);
 
 })
 
 }
 </script>
 </head>
+<body>
 
+<div id="viz">
+
+</div>
+
+</body>
 
 </html>
