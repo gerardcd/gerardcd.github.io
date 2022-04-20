@@ -54,7 +54,7 @@ ax.axhline(0, color="black", ls="--")
 plt.xticks(rotation=90)
 ps = [Rectangle((0, 0), 1, 1, fc=col) for col in colors]
 plt.legend(ps, countries)
-
+plt.title("Morts per COVID-19 per país i mes")
 plt.savefig('stream.png')
 
 plt.show()

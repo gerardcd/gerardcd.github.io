@@ -46,7 +46,7 @@ for country in countries:
         column += 1
 
     #data.append(go.Scatter(x=columns, y=heads, mode='markers', marker={'color': "black", 'symbol': 'circle', 'size': 10}))
-    data.append(go.Scatter(x=columns, y=rows, mode='markers', marker={'color': "grey", 'symbol': 'circle', 'size': 20}, name=f"{country} population"))
+    data.append(go.Scatter(x=columns, y=rows, mode='markers', marker={'color': "grey", 'symbol': 'circle', 'size': 20}, name=f"{country} població"))
 
     last_row = row
     row = init_row
@@ -67,7 +67,7 @@ for country in countries:
         column += 1
 
     #data.append(go.Scatter(x=columns, y=heads, mode='markers', marker={'color': "blue", 'symbol': 'circle', 'size': 10}))
-    data.append(go.Scatter(x=columns, y=rows, mode='markers', marker={'color': "blue", 'symbol': 'circle', 'size': 20},  name=f"{country} cases"))
+    data.append(go.Scatter(x=columns, y=rows, mode='markers', marker={'color': "blue", 'symbol': 'circle', 'size': 20},  name=f"{country} casos"))
 
     row = last_row + 1
     column = 0
@@ -75,5 +75,5 @@ for country in countries:
 fig = go.Figure(dict(data=data, layout=go.Layout(plot_bgcolor='white',
                                                  xaxis=dict(visible=False),
                                                  yaxis=dict(visible=False))))
-fig.update_layout(title='COVID-19 cases per country', title_x=0.45, title_y=0.95, font=dict(size=18))
+fig.update_layout(title='Població i casos de COVID-19 per país', title_x=0.45, title_y=0.95, font=dict(size=18))
 fig.show()

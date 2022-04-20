@@ -25,5 +25,6 @@ wordcloud = WordCloud(collocations=False, background_color="white").generate_fro
 # Display the generated image:
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
+plt.title("Països amb més morts per COVID-19")
 plt.savefig('cloud.png')
 plt.show()
