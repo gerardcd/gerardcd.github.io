@@ -46,7 +46,7 @@ for country in countries:
         column += 1
 
     #data.append(go.Scatter(x=columns, y=heads, mode='markers', marker={'color': "black", 'symbol': 'circle', 'size': 10}))
-    data.append(go.Scatter(x=columns, y=rows, mode='markers', marker={'color': "black", 'symbol': 'circle', 'size': 20}, name=f"{country} population"))
+    data.append(go.Scatter(x=columns, y=rows, mode='markers', marker={'color': "grey", 'symbol': 'circle', 'size': 20}, name=f"{country} population"))
 
     last_row = row
     row = init_row
