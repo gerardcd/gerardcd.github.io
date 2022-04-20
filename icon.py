@@ -75,5 +75,5 @@ for country in countries:
 fig = go.Figure(dict(data=data, layout=go.Layout(plot_bgcolor='white',
                                                  xaxis=dict(visible=False),
                                                  yaxis=dict(visible=False))))
-fig.update_layout(title='Població i casos de COVID-19 per país', title_x=0.45, title_y=0.95, font=dict(size=18))
+fig.update_layout(title='Població i casos de COVID-19 per país (per milió)', title_x=0.45, title_y=0.95, font=dict(size=18))
 fig.show()
