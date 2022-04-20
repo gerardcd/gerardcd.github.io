@@ -3,7 +3,6 @@ from matplotlib.patches import Rectangle
 import json
 from datetime import datetime
 import pandas as pd
-import tqdm
 import numpy as np
 from scipy import stats
 
@@ -54,5 +53,7 @@ ax.axhline(0, color="black", ls="--")
 plt.xticks(rotation=90)
 ps = [Rectangle((0, 0), 1, 1, fc=col) for col in colors]
 plt.legend(ps, countries)
-plt.show()
 
+plt.savefig('stream.png')
+
+plt.show()
