@@ -3,7 +3,6 @@ from matplotlib.patches import Rectangle
 import json
 from datetime import datetime
 import pandas as pd
-import tqdm
 import numpy as np
 from scipy import stats
 
@@ -21,10 +20,11 @@ countries.sort()
 
 data_stacked = []
 i = 0
-for country in countries:
+
+for date in dates:
     country_record = []
 
-    for date in dates:
+    for country in countries:
 
         print(f"{i}/{len(countries) * len(dates)}")
         i += 1
@@ -35,7 +35,12 @@ for country in countries:
         else:
             country_record.append(records["deaths"].sum())
 
-    data_stacked.append(np.array(country_record))
+    data_stacked.append({"date": date, "deaths": country_record})
+
+with open("data_cases_stacked.json", "w") as fd:
+    json.dump((data_stacked), fd)
+
+exit(0)
 
 def gaussian_smooth(x, y, grid, sd):
     x = [i for i in range(len(x))]
