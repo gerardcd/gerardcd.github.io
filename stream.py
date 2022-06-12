@@ -52,12 +52,15 @@ grid = np.linspace(0, len(dates), num=len(dates))
 y_smoothed = [gaussian_smooth(dates, y_, grid, 1) for y_ in data_stacked]
 
 fig, ax = plt.subplots(figsize=(10, 7))
-colors = ["#{val}{val}FF".format(val=hex(i)[2:].zfill(2)) for i in range(0, 255, 50)]
+#colors = ["#{val}{val}FF".format(val=hex(i)[2:].zfill(2)) for i in range(0, 255, 50)]
+colors = ["#fd7f6f", "#7eb0d5", "#b2e061", "#bd7ebe", "#ffb55a"]
 ax.stackplot(dates, data_stacked, colors=colors, baseline="sym")
 #ax.stackplot(dates, data_stacked, baseline="sym")
 ax.axhline(0, color="black", ls="--")
 plt.xticks(rotation=90)
 ps = [Rectangle((0, 0), 1, 1, fc=col) for col in colors]
 plt.legend(ps, countries)
-plt.show()
+plt.title("Morts per COVID-19 per país i mes")
+plt.savefig('stream.png')
 
+plt.show()
