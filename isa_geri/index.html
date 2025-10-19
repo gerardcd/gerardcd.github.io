@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bodorrio Isa i Geri</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-accent-purple">
+  <header class="hero">
+    <img src="images/isa_geri.jpeg" alt="Isa i Geri" class="hero-img">
+    <div class="hero-overlay">
+      <h1 class="hero-title">Bodorrio Isa i Geri</h1>
+      <p class="hero-sub">14 Març 2026 · Mercat del Born · 14h</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card invite">
+      <h2>Ens complau convidar-vos</h2>
+      <p>
+        Ens complau convidar-vos a la celebració del nostre casament. Compartirem un dia especial amb família i amics — menjar, música i una mica de festa.
+      </p>
+      <p>
+        Data: <strong>14 Març 2026</strong><br>
+        Lloc: <strong>Mercat del Born</strong><br>
+        Hora: <strong>14h</strong>
+      </p>
+    </section>
+
+    <section class="card rsvp">
+      <h3>Confirmació i informació</h3>
+      <p>
+        Si us plau, obriu el formulari i ompliu totes les dades que us demanarem: assistència (RSVP), al·lèrgies o preferències alimentàries, suggeriments musicals, etc. És molt important per a l'organització.
+      </p>
+      <p class="actions">
+        <a id="open-form" class="btn" href="#">Omplir el formulari (RSVP)</a>
+        <small class="muted">(En crear el formulari a Google Forms, canvieu l'enllaç a l'atribut <code>href</code> d'aquest botó.)</small>
+      </p>
+    </section>
+
+    <section class="card gifts">
+      <h3>Regals</h3>
+      <p class="muted">Si preferiu fer-nos una aportació en compte en lloc d'un regal físic, serà molt benvinguda — és totalment opcional.</p>
+      <div class="iban-row">
+        <code id="iban">ES00 0000 0000 0000 0000 0000</code>
+        <button id="copy-iban" class="btn tiny">Copia</button>
+      </div>
+      <p class="muted small">Si feu una transferència, poseu el vostre nom a la referència perquè puguem agrair-ho correctament.</p>
+    </section>
+  </main>
+
+  <footer class="footer muted">
+    <p>Esperem celebrar-ho amb vosaltres. Amb afecte, Isa i Geri.</p>
+  </footer>
+
+  <!-- Modal (simple) -->
+  <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+    <div class="modal-card">
+      <h4>Instruccions per al formulari</h4>
+      <p>En el formulari us demanarem confirmació d'assistència, preferències alimentàries i alguna informació pràctica.</p>
+      <p><a id="modal-form-link" href="#" class="btn">Obrir el formulari</a></p>
+      <p><button id="modal-close" class="btn ghost">Tancar</button></p>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
