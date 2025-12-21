@@ -14,7 +14,6 @@
     body {
       min-height: 100vh;
       min-width: 100vw;
-      /* Remove flex centering for desktop scroll */
     }
     img {
       display: block;
@@ -30,6 +29,10 @@
         max-width: 100vw;
         max-height: 100vh;
       }
+      .image-container {
+        display: flex;
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -38,7 +41,7 @@
     <img id="wedding-img" src="SaveTheDate.jpg" usemap="#weddingmap" alt="Wedding Invitation" width="2481" height="3508">
   </div>
   <map name="weddingmap">
-    <area shape="rect" coords="150, 3030, 1320, 3180" href="https://maps.app.goo.gl/Jf2iKAyXFEtpkZw3A" alt="See location" target="_blank">
+    <area shape="rect" coords="150, 3030, 1320, 3350" href="https://maps.app.goo.gl/Jf2iKAyXFEtpkZw3A" alt="See location" target="_blank">
   </map>
   <script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
   <script>
