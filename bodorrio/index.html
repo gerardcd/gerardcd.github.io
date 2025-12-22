@@ -25,16 +25,46 @@
     @media (min-width: 768px) {
       img {
         width: auto;
-        height: 100vh;
+        height: 90vh;
         max-width: 100vw;
-        max-height: 100vh;
+        max-height: 90vh;
       }
       .image-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: 90vh;
       }
+    }
+    .modern-button {
+      display: inline-block;
+      padding: 0.85em 2.2em;
+      font-size: 1.15em;
+      font-weight: 600;
+      color: #000000;
+      background: #ffffff;
+      border: none;
+      border-radius: 2em;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+      margin: 0 auto 0 auto;
+      display: block;
+      letter-spacing: 0.04em;
+    }
+    .modern-button:hover, .modern-button:focus {
+      background: #ff0000;
+      color: #ffffff;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+      outline: none;
+    }
+    .modern-button a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
@@ -46,6 +76,9 @@
     <area shape="rect" coords="159,2857,2326,3160" href="https://maps.app.goo.gl/Jf2iKAyXFEtpkZw3A" alt="Lloc" target="_blank">
     <area shape="rect" coords="1082,3263,2351,3442" href="#" alt="Núm. de compte" onclick="copyAccountNumber(event)">
   </map>
+  <button class="modern-button">
+    <a href="https://maps.app.goo.gl/Jf2iKAyXFEtpkZw3A" target="_blank">Confirmar assistència</a>
+  </button>
   <div id="popup" style="display:none;position:fixed;top:30px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:12px 24px;border-radius:8px;z-index:1000;font-size:1.1em;box-shadow:0 2px 8px #0008;">Número de compte copiat!</div>
   <script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
   <script>
