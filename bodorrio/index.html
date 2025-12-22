@@ -39,7 +39,6 @@
     .modern-button {
       display: inline-block;
       padding: 0.85em 2.2em;
-      font-size: 1.15em;
       font-weight: 600;
       color: #000000;
       background: #ffffff;
@@ -67,6 +66,9 @@
       height: 100%;
     }
     /* Mobile improvements - only one media query for mobile, at the end */
+    @media (min-width: 600px) {
+      font-size: 1.15em;
+    }
     @media (max-width: 600px) {
       .modern-button {
         font-size: 2em !important;
