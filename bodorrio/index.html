@@ -43,8 +43,10 @@
     <img id="wedding-img" src="SaveTheDate.jpg" usemap="#weddingmap" alt="Wedding Invitation" width="2481" height="3508">
   </div>
   <map name="weddingmap">
-    <area shape="rect" coords="150, 3030, 1320, 3350" href="https://maps.app.goo.gl/Jf2iKAyXFEtpkZw3A" alt="See location" target="_blank">
+    <area shape="rect" coords="159,2857,2326,3160" href="https://maps.app.goo.gl/Jf2iKAyXFEtpkZw3A" alt="Lloc" target="_blank">
+    <area shape="rect" coords="1082,3263,2351,3442" href="#" alt="Núm. de compte" onclick="copyAccountNumber(event)">
   </map>
+  <div id="popup" style="display:none;position:fixed;top:30px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:12px 24px;border-radius:8px;z-index:1000;font-size:1.1em;box-shadow:0 2px 8px #0008;">Número de compte copiat!</div>
   <script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
   <script>
     window.onload = function() {
@@ -52,6 +54,15 @@
         imageMapResize();
       }
     };
+    function copyAccountNumber(e) {
+      e.preventDefault();
+      const account = 'ES26 0182 3185 9202 0157 6363'; // Replace with your real account number
+      navigator.clipboard.writeText(account).then(function() {
+        const popup = document.getElementById('popup');
+        popup.style.display = 'block';
+        setTimeout(() => { popup.style.display = 'none'; }, 1800);
+      });
+    }
   </script>
 </body>
 </html>
