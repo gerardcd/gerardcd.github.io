@@ -35,7 +35,24 @@
         align-items: center;
         height: 90vh;
       }
+      .modern-button {
+        font-size: 1.15em;
+      }
     }
+    @media (max-width: 768px) {
+      .modern-button {
+        font-size: 2em !important;
+        padding: 1.1em 2.8em !important;
+        border-radius: 2.5em !important;
+      }
+      #popup {
+        font-size: 2em !important;
+        padding: 18px 28px !important;
+        min-width: 70vw !important;
+        text-align: center !important;
+      }
+    }
+      
     .modern-button {
       display: inline-block;
       padding: 0.85em 2.2em;
@@ -64,23 +81,6 @@
       display: block;
       width: 100%;
       height: 100%;
-    }
-    /* Mobile improvements - only one media query for mobile, at the end */
-    @media (min-width: 600px) {
-      font-size: 1.15em;
-    }
-    @media (max-width: 600px) {
-      .modern-button {
-        font-size: 2em !important;
-        padding: 1.1em 2.8em !important;
-        border-radius: 2.5em !important;
-      }
-      #popup {
-        font-size: 2em !important;
-        padding: 18px 28px !important;
-        min-width: 70vw !important;
-        text-align: center !important;
-      }
     }
   </style>
 </head>
