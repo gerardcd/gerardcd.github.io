@@ -66,6 +66,20 @@
       width: 100%;
       height: 100%;
     }
+    /* Mobile improvements - only one media query for mobile, at the end */
+    @media (max-width: 600px) {
+      .modern-button {
+        font-size: 2em !important;
+        padding: 1.1em 2.8em !important;
+        border-radius: 2.5em !important;
+      }
+      #popup {
+        font-size: 2em !important;
+        padding: 18px 28px !important;
+        min-width: 70vw !important;
+        text-align: center !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -77,9 +91,9 @@
     <area shape="rect" coords="1082,3263,2351,3442" href="#" alt="Núm. de compte" onclick="copyAccountNumber(event)">
   </map>
   <button class="modern-button">
-    <a href="https://maps.app.goo.gl/Jf2iKAyXFEtpkZw3A" target="_blank">Confirmar assistència</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd3xeWEAcRLhcgpNnE-Z5m8jSXsk7L5FNLKr3VcZmE_PzqTDQ/viewform?usp=dialog" target="_blank">Confirmar assistència</a>
   </button>
-  <div id="popup" style="display:none;position:fixed;top:30px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:12px 24px;border-radius:8px;z-index:1000;font-size:1.1em;box-shadow:0 2px 8px #0008;">Número de compte copiat!</div>
+  <div id="popup" style="display:none;position:fixed;top:30px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:12px 24px;border-radius:8px;z-index:1000;box-shadow:0 2px 8px #0008;">Número de compte copiat!</div>
   <script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
   <script>
     window.onload = function() {
